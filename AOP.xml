@@ -1,0 +1,11 @@
+<aspectj>
+    <aspects>
+        <aspect name="com.yourcompany.zoo.PerfSpyDemoAsepct"/>
+    </aspects>
+    <weaver options="-verbose -showWeaveInfo -debug">
+        <include within="com.yourcompany.zoo.animal..*"/>
+        <include within="com.yourcompany.zoo.people..*"/>
+        <dump beforeandafter="true" within="com.yourcompany.zoo.animal..*"/>
+        <dump beforeandafter="true" within="com.yourcompany.zoo.people..*"/>
+    </weaver>
+</aspectj>
